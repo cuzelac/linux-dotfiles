@@ -1,0 +1,38 @@
+set textwidth=0
+set background=dark
+set history=1000
+set visualbell
+set mouse=v
+
+colorscheme vividchalk
+
+:nmap <silent> <leader>dd <Plug>DashSearch
+:nmap <silent> <leader>dg <Plug>DashGlobalSearch
+
+" disable shortcuts for narrowregion to make NERDTree default bindings work
+:unmap <leader>nr
+
+:nmap <leader>vn :setlocal number!<cr>
+:nmap <leader>vw :setlocal wrap!<cr>
+:nmap <leader>vp :setlocal paste!<cr>
+:nmap <leader>vfr :setlocal ft=ruby<cr>
+:nmap <leader>vma :set mouse=a<cr>
+:nmap <leader>vmv :set mouse=v<cr>
+
+" NERDCommenter config
+" kill the stupid Janus <leader>cd crap
+:unmap <leader>cd
+:nmap <leader>c :call NERDComment('n','Toggle')<cr>
+:vmap <leader>c :call NERDComment('v','Toggle')<cr>
+
+:nmap <leader>b :BuffergatorToggle<CR>
+:nmap <leader>B :BuffergatorTabsOpen<CR>
+
+" Tab Setup
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
+nnoremap tn :TabooOpen<Space>
+nnoremap tr :TabooRename<Space>
+nnoremap tt :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap tq :tabclose<CR>

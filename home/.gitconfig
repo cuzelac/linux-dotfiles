@@ -1,0 +1,23 @@
+[user]
+	name = Chris Uzelac
+	email = cu@squareup.com
+[github]
+	host = git.squareup.com
+[mergetool]
+	keepBackup = true
+[alias]
+  s = status -s
+  df =diff --name-only
+  tree = log --oneline --decorate --all --graph
+  permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+  sub = submodule
+[color]
+  ui = auto
+[push]
+	default = matching
+
+# bash -c "git diff --summary | grep --color 'mode change 100755 => 100644' | cut -d' ' -f7- | xargs -d'\n' chmod +x;
+# git diff --summary | grep --color 'mode change 100644 => 100755' | cut -d' ' -f7- | xargs -d'\n' chmod -x"
+# bash -c "git diff --summary | grep --color 'mode change 100755 => 100644' | cut -d' ' -f7- | xargs -d'\n' chmod +x; git diff --summary | grep --color 'mode change 100644 => 100755' | cut -d' ' -f7- | xargs -d'\n' chmod -x"> /dev/null 2>&1
+[diff]
+	algorithm = patience

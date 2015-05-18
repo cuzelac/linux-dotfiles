@@ -1,0 +1,7 @@
+alias ec2='ssh cuzelac@ec2.allecto.org'
+alias grep='grep --color'
+alias iad1='ssh ambastion.iad1'
+alias ls='ls --color'
+alias utcdate='TZ=UTC date'
+alias vir='vim -R'
+alias ctags='git submodule foreach ctags; ctags'
