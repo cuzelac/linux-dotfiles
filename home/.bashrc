@@ -7,13 +7,15 @@ then
 fi
 
 # Source global definitions
-
 set -o vi
 shopt -s checkwinsize
 export EDITOR=vim
 export LSCOLORS='fxgxcxdxDxegedabagacad'
 
-
 # User specific aliases and functions
 
 export PATH=$HOME/bin:/usr/local/bin:/Developer/usr/bin:$PATH:$HOME/.gem/ruby/1.8/bin:$HOME/.rvm/bin/opt/local/bin:/opt/local/sbin
+
+# Go variables
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
