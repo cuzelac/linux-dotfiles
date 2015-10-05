@@ -1,7 +1,13 @@
 let mapleader = ","
+"let g:autotagTagsFile = ".git/tags"
+
 let g:autotagTagsFile = "tags"
 let g:buffergator_suppress_keymaps = 1
 let g:NERDCreateDefaultMappings = 0
+
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 call janus#disable_plugin('snipmate')"
 call janus#disable_plugin('easymotion')"
