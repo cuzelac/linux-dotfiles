@@ -9,6 +9,8 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+let python_highlight_all = 1
+
 call janus#disable_plugin('snipmate')"
 call janus#disable_plugin('easymotion')"
 call janus#disable_plugin('nrrwrgn')"
