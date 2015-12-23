@@ -5,6 +5,8 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
+
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.gem/ruby/1.8/bin:$HOME/bin

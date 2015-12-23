@@ -11,6 +11,7 @@
   tree = log --oneline --decorate --all --graph
   permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
   sub = submodule
+  tableflip = !git reset --hard && git clean -fd
 [color]
   ui = auto
 [push]

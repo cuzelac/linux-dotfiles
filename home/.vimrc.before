@@ -4,12 +4,15 @@ let mapleader = ","
 let g:autotagTagsFile = "tags"
 let g:buffergator_suppress_keymaps = 1
 let g:NERDCreateDefaultMappings = 0
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store --ignore "**/*.pyc" -g ""'
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+let g:airline_powerline_fonts = 1
 
 let python_highlight_all = 1
+au BufRead,BufNewFile * :filetype detect
 
 call janus#disable_plugin('snipmate')"
 call janus#disable_plugin('easymotion')"
